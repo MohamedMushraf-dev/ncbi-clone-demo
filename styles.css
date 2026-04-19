@@ -9,22 +9,22 @@ body {
 a { color: #2E6E9E; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* Government banner */
+/* ── Government banner ── */
 .gov-banner {
   background: #f0f0f0;
   border-bottom: 1px solid #d6d6d6;
   font-size: 12px;
-  padding: 6px 20px;
+  padding: 5px 20px;
   color: #1b1b1b;
 }
-.gov-banner .flag { margin-right: 8px; }
+.gov-banner .flag { margin-right: 6px; }
 .gov-banner a { margin-left: 6px; color: #2E6E9E; }
 
-/* NIH header */
+/* ── NIH header ── */
 .nih-header {
   background: #2C6DA3;
   color: #fff;
-  padding: 10px 20px;
+  padding: 8px 20px;
 }
 .nih-header-inner {
   display: flex;
@@ -34,84 +34,77 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
 }
 .nih-brand { display: flex; align-items: center; text-decoration: none; }
-.nih-logo-img {
-  height: 65px;
-  width: auto;
-  display: block;
-}
+.nih-logo-img { height: 62px; width: auto; display: block; }
 .login-btn {
   background: transparent;
   border: 1px solid #fff;
   color: #fff;
-  padding: 7px 16px;
+  padding: 6px 16px;
   font-size: 14px;
   border-radius: 3px;
   cursor: pointer;
 }
 .login-btn:hover { background: rgba(255,255,255,0.15); }
 
-/* Search row */
+/* ── Search row ── */
 .search-row {
   background: #e8e8e8;
-  padding: 12px 20px;
+  padding: 10px 20px;
   border-bottom: 1px solid #ccc;
 }
 .search-form {
   display: flex;
-  gap: 0;
   max-width: 1100px;
   margin: 0 auto;
 }
 .db-select {
-  padding: 6px 8px;
+  padding: 5px 8px;
   font-size: 14px;
   border: 1px solid #aaa;
   border-right: none;
   background: #fff;
   border-radius: 2px 0 0 2px;
+  min-width: 130px;
 }
 .search-input {
   flex: 1;
-  padding: 6px 8px;
+  padding: 5px 8px;
   font-size: 14px;
   border: 1px solid #aaa;
   background: #fff;
   border-radius: 0;
+  outline: none;
 }
 .search-btn {
   background: #2C6DA3;
   color: #fff;
   border: none;
-  padding: 6px 20px;
+  padding: 5px 22px;
   font-size: 14px;
   cursor: pointer;
   border-radius: 0 2px 2px 0;
   font-weight: bold;
+  letter-spacing: .3px;
 }
 .search-btn:hover { background: #245a87; }
 
-/* 3-column layout */
+/* ── 3-column page layout ── */
 .layout {
   display: grid;
-  grid-template-columns: 230px 1fr 240px;
-  gap: 0;
+  grid-template-columns: 230px 1fr 260px;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 14px 20px;
   align-items: start;
 }
 
-/* Left sidebar */
-.left-sidebar { padding-right: 10px; border-right: 1px solid #ddd; }
-.left-nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+/* ── Left sidebar ── */
+.left-sidebar { padding-right: 0; border-right: 1px solid #ddd; }
+.left-nav { list-style: none; margin: 0; padding: 0; }
 .left-nav li {
-  padding: 7px 10px;
+  padding: 6px 10px;
   border-bottom: 1px solid #e8e8e8;
-  font-size: 14px;
+  font-size: 13px;
   color: #2E6E9E;
   cursor: pointer;
 }
@@ -125,7 +118,7 @@ a:hover { text-decoration: underline; }
 .left-nav li.bold { font-weight: bold; color: #333; }
 .left-nav li:hover:not(.active) { background: #f5f5f5; }
 
-/* Main content */
+/* ── Main content ── */
 .main-content { padding: 0 20px; }
 .welcome-title {
   color: #7A4F1D;
@@ -133,39 +126,33 @@ a:hover { text-decoration: underline; }
   margin: 0 0 10px 0;
   font-weight: bold;
 }
-.welcome-text { color: #333; font-size: 14px; line-height: 1.5; margin-bottom: 12px; }
-.welcome-links { font-size: 13px; margin-bottom: 20px; color: #555; }
+.welcome-text { font-size: 14px; line-height: 1.5; margin-bottom: 10px; }
+.welcome-links { font-size: 13px; margin-bottom: 18px; color: #555; }
 .welcome-links a { margin: 0 2px; }
 
-/* 6-column icon grid */
+/* 6-card grid */
 .six-cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px 12px;
-  margin-top: 16px;
+  gap: 14px 10px;
+  margin-top: 10px;
 }
-.six-cols .col { text-align: center; }
-.six-cols h3 {
-  color: #7A4F1D;
-  font-size: 15px;
-  margin: 0 0 6px 0;
-}
-.six-cols p {
-  color: #2E6E9E;
-  font-size: 13px;
-  margin: 0 0 10px 0;
-  line-height: 1.4;
-}
+.six-cols .col { text-align: center; padding: 6px 4px; }
+.six-cols h3 { margin: 0 0 5px 0; font-size: 14px; }
+.six-cols h3 a { color: #7A4F1D; font-weight: bold; }
+.six-cols p { color: #2E6E9E; font-size: 12px; margin: 0 0 8px 0; line-height: 1.4; }
 .col-icon {
-  width: 72px;
-  height: 72px;
+  width: 68px;
+  height: 68px;
   display: block;
   margin: 0 auto;
+  opacity: 0.75;
+  filter: grayscale(20%);
 }
 
-/* Right sidebar */
+/* ── Right sidebar ── */
 .right-sidebar { padding-left: 16px; border-left: 1px solid #ddd; }
-.side-box { margin-bottom: 18px; }
+.side-box { margin-bottom: 16px; }
 .side-title {
   color: #7A4F1D;
   font-size: 14px;
@@ -177,37 +164,97 @@ a:hover { text-decoration: underline; }
 .side-links { list-style: none; margin: 0; padding: 0; }
 .side-links li { padding: 3px 0; font-size: 14px; }
 .side-links a { color: #2E6E9E; }
+.blog-links li { padding: 5px 0; border-bottom: 1px solid #eee; }
+.blog-links a { display: block; font-size: 13px; line-height: 1.3; }
+.blog-date { font-size: 11px; color: #888; display: block; margin-top: 2px; }
+.more-link { font-size: 13px; color: #2E6E9E; display: block; margin-top: 6px; }
 
-/* Footer */
-.site-footer {
-  background: #f0f0f0;
-  border-top: 1px solid #ccc;
-  margin-top: 30px;
-  padding: 20px;
+/* ══ FOOTER ══ */
+
+/* 1 — Follow NCBI bar */
+.footer-follow {
+  background: #2C6DA3;
+  color: #fff;
+  text-align: center;
+  padding: 18px 20px 22px;
 }
-.footer-inner {
-  max-width: 1400px;
-  margin: 0 auto;
+.footer-follow-title {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+.footer-follow-icons {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 36px;
 }
-.footer-left { display: flex; align-items: flex-start; gap: 14px; }
-.footer-logo { height: 45px; width: auto; }
-.footer-address { font-size: 12px; color: #444; line-height: 1.6; }
-.footer-right { text-align: right; }
-.footer-links { font-size: 12px; color: #555; margin-bottom: 10px; }
-.footer-links a { color: #2E6E9E; margin: 0 4px; }
-.footer-social { display: flex; gap: 10px; justify-content: flex-end; }
-.social-icon { color: #555; display: flex; align-items: center; }
-.social-icon:hover { color: #2C6DA3; }
+.follow-icon { color: #fff; display: flex; align-items: center; }
+.follow-icon:hover { color: #cde; text-decoration: none; }
 
-/* ── Result page ── */
+/* 2 — Middle row */
+.footer-middle {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 18px 20px;
+}
+.footer-mid-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Connect with NLM */
+.footer-connect-title {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+.footer-connect-icons { display: flex; gap: 8px; }
+.connect-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+}
+.connect-icon:hover { opacity: 0.85; text-decoration: none; }
+.connect-x  { background: #000; }
+.connect-fb { background: #1877F2; }
+.connect-yt { background: #FF0000; }
+
+.footer-address { font-size: 13px; color: #444; line-height: 1.8; }
+
+.footer-policies a,
+.footer-help a {
+  display: block;
+  font-size: 13px;
+  color: #2E6E9E;
+  padding: 2px 0;
+}
+
+/* 3 — Bottom bar */
+.footer-bottom {
+  background: #2C6DA3;
+  text-align: center;
+  padding: 10px 20px;
+}
+.footer-bottom a { color: #fff; font-size: 13px; margin: 0 4px; }
+.footer-bottom a:hover { text-decoration: underline; }
+.footer-sep { color: #fff; margin: 0 2px; }
+
+/* ══ Result page ══ */
 .result-search-row {
   background: #e8e8e8;
-  padding: 10px 20px;
+  padding: 10px 20px 8px;
   border-bottom: 1px solid #ccc;
 }
 .result-search-inner {
@@ -215,9 +262,8 @@ a:hover { text-decoration: underline; }
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
-  position: relative;
 }
 .db-label { font-size: 20px; color: #333; font-weight: 400; white-space: nowrap; }
 .result-form { flex: 1; max-width: 860px; margin: 0; }
@@ -231,13 +277,13 @@ a:hover { text-decoration: underline; }
   gap: 20px;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 14px 20px;
   align-items: start;
 }
 
 .result-main { min-width: 0; }
 .genbank-line { font-size: 14px; margin-bottom: 6px; }
-.result-title { font-size: 22px; margin: 4px 0 4px 0; color: #222; font-weight: bold; }
+.result-title { font-size: 22px; margin: 4px 0; color: #222; font-weight: bold; }
 .result-sub { font-size: 14px; color: #444; margin-bottom: 8px; }
 .result-actions { font-size: 14px; margin-bottom: 10px; }
 .result-actions a { margin-right: 14px; }
@@ -263,10 +309,10 @@ a:hover { text-decoration: underline; }
 .side-panel {
   border: 1px solid #c8c8c8;
   background: #f1f1f1;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .panel-head {
-  padding: 8px 10px;
+  padding: 7px 10px;
   font-weight: bold;
   color: #444;
   display: flex;
@@ -276,13 +322,16 @@ a:hover { text-decoration: underline; }
 }
 .muted { color: #888; font-size: 12px; }
 
+/* ── Responsive ── */
 @media (max-width: 960px) {
   .layout { grid-template-columns: 1fr; }
   .result-layout { grid-template-columns: 1fr; }
   .six-cols { grid-template-columns: repeat(2, 1fr); }
-  .nih-logo-img { height: 48px; }
+  .footer-mid-inner { grid-template-columns: 1fr 1fr; }
   .advanced { padding-left: 0; }
 }
 @media (max-width: 600px) {
   .six-cols { grid-template-columns: 1fr; }
+  .footer-mid-inner { grid-template-columns: 1fr; }
+  .footer-follow-icons { gap: 20px; }
 }
