@@ -6,6 +6,12 @@ GenBank page) shows the OpenAI answer inside the **REFERENCE 2** block.
 
 **Live demo:** https://client1-xi-seven.vercel.app
 
+## Deploy your own copy
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMohamedMushraf-dev%2Fncbi-clone-demo&env=OPENAI_API_KEY&envDescription=Your%20OpenAI%20API%20key%20-%20get%20it%20from%20https%3A%2F%2Fplatform.openai.com%2Fapi-keys&envLink=https%3A%2F%2Fplatform.openai.com%2Fapi-keys&project-name=ncbi-clone-demo&repository-name=ncbi-clone-demo)
+
+📖 **Full step-by-step setup guide:** [CLIENT_SETUP.md](./CLIENT_SETUP.md)
+
 ## Stack
 
 - Pure HTML / CSS / JS (no frameworks)
