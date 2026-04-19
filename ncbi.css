@@ -21,7 +21,7 @@ body {
   min-height: 52px;
 }
 
-/* res_logo: fixed width on left */
+/* res_logo: fixed-width left slot */
 .res_logo {
   display: flex !important;
   align-items: center;
@@ -29,25 +29,21 @@ body {
   width: 11.5em;
   padding: 6px 0;
 }
-.res_logo .img_logo,
-.res_logo .res_name {
+
+/* Hide the tagline + img_logo text — the NIH logo in the blue header above is enough */
+.res_logo h2.res_tagline,
+.res_logo h1.img_logo {
+  display: none !important;
+}
+
+/* Show res_name (e.g. "Nucleotide") on result/db pages */
+.res_logo h1.res_name {
+  display: block !important;
   margin: 0;
-  font-weight: normal;
-}
-.res_logo .img_logo a {
-  font-size: 2em;
   font-weight: bold;
-  color: #333;
-  text-decoration: none;
-}
-.res_logo .res_tagline {
-  font-size: 0.8em;
-  color: #555;
-  display: block;
-  line-height: 1.2;
 }
 .res_logo .res_name a {
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bold;
   color: #333;
   text-decoration: none;
