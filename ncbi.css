@@ -43,12 +43,18 @@ body {
   font-weight: bold;
 }
 .res_logo .res_name a {
+  position: static !important;   /* NCBI CSS sets position:absolute — override it */
   font-size: 1.4em;
   font-weight: bold;
   color: #333;
   text-decoration: none;
 }
 .res_logo .res_name a:hover { text-decoration: underline; }
+
+/* Also cancel the margin-left NCBI CSS puts on .search — we use flexbox instead */
+.header .search {
+  margin-left: 0 !important;
+}
 
 /* search div: takes remaining width */
 .header .search {
