@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nucleotide - NCBI</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nih-header">
+  <div class="nih-header-inner">
+    <div class="nih-brand">
+      <div class="nih-logo">NIH<span class="logo-arrow">&#9656;</span></div>
+      <div class="nih-titles">
+        <div class="nih-title">National Library of Medicine</div>
+        <div class="nih-subtitle">National Center for Biotechnology Information</div>
+      </div>
+    </div>
+    <button class="login-btn">Log in</button>
+  </div>
+</header>
+
+<section class="result-search-row">
+  <div class="result-search-inner">
+    <span class="db-label">Nucleotide</span>
+    <form id="resultSearchForm" class="search-form result-form" action="result.html" method="get">
+      <select name="db" class="db-select">
+        <option>Nucleotide</option>
+        <option>All Databases</option>
+        <option>PubMed</option>
+        <option>Protein</option>
+      </select>
+      <input type="text" name="q" id="resultSearchInput" class="search-input" />
+      <button type="submit" class="search-btn">Search</button>
+    </form>
+    <a href="#" class="help-link">Help</a>
+    <div class="advanced"><a href="#">Advanced</a></div>
+  </div>
+</section>
+
+<main class="result-layout">
+  <section class="result-main">
+    <div class="genbank-line"><a href="#">GenBank &#9662;</a></div>
+    <h1 class="result-title">Human ribosomal DNA complete repeating unit</h1>
+    <div class="result-sub">GenBank: U13369.1</div>
+    <div class="result-actions">
+      <a href="#">FASTA</a>
+      <a href="#">Graphics</a>
+    </div>
+    <hr class="thin-rule" />
+    <div class="goto"><a href="#">Go to:</a> <span class="caret">&#9662;</span></div>
+
+    <pre class="genbank-block">
+<span class="gb-key">LOCUS</span>       HSU13369                42999 bp    DNA     linear   PRI 12-MAR-2010
+<span class="gb-key">DEFINITION</span>  Human ribosomal DNA complete repeating unit.
+<span class="gb-key">ACCESSION</span>   U13369
+<span class="gb-key">VERSION</span>     U13369.1
+<span class="gb-key">KEYWORDS</span>    18S rRNA; 28S rRNA; 5.8S rRNA; 5'ETS; 3'ETS; ITS1; ITS2; intergenic
+            spacer; cdc27 pseudogene; p53 binding site.
+<span class="gb-key">SOURCE</span>      Homo sapiens (human)
+  <span class="gb-key">ORGANISM</span>  <a href="#">Homo sapiens</a>
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+<span class="gb-key">REFERENCE</span>   1  (bases 1 to 42999)
+  <span class="gb-key">AUTHORS</span>   Nazar,R.N., Sitz,T.O. and Busch,H.
+  <span class="gb-key">TITLE</span>     Sequence homologies in mammalian 5.8S ribosomal RNA
+  <span class="gb-key">JOURNAL</span>   Biochemistry 15 (3), 505-508 (1976)
+   <span class="gb-key">PUBMED</span>   <a href="#">1252408</a>
+<span class="ref2-highlight"><span class="gb-key">REFERENCE</span>   2  (bases 1 to 42999)</span>
+  <span class="gb-key">AUTHORS</span>   <span id="ref2-authors">OpenAI, GPT-3.5-turbo.</span>
+  <span class="gb-key">TITLE</span>     <span id="ref2-title">Loading answer&hellip;</span>
+  <span class="gb-key">JOURNAL</span>   <span id="ref2-journal">AI Generated Response (<span id="ref2-date">2026</span>)</span>
+   <span class="gb-key">QUERY</span>    <span id="ref2-query">&mdash;</span>
+   <span class="gb-key">ANSWER</span>   <span id="ref2-answer" class="ref2-answer">Waiting for OpenAI&hellip;</span>
+<span class="gb-key">REFERENCE</span>   3  (bases 1 to 42999)
+  <span class="gb-key">AUTHORS</span>   Miesfeld,R. and Arnheim,N.
+  <span class="gb-key">TITLE</span>     Identification of the in vivo and in vitro origin of transcription
+            in human rDNA
+  <span class="gb-key">JOURNAL</span>   Nucleic Acids Res. 10 (13), 3933-3949 (1982)
+   <span class="gb-key">PUBMED</span>   <a href="#">7050913</a>
+</pre>
+  </section>
+
+  <aside class="result-sidebar">
+    <div class="side-panel">
+      <div class="panel-head">Change region shown <span class="caret">&#9662;</span></div>
+    </div>
+    <div class="side-panel">
+      <div class="panel-head">Customize view <span class="caret">&#9662;</span></div>
+    </div>
+
+    <div class="side-box">
+      <h3 class="side-title">Analyze this sequence</h3>
+      <ul class="side-links">
+        <li><a href="#">Run BLAST</a></li>
+        <li><a href="#">Pick Primers</a></li>
+        <li><a href="#">Highlight Sequence Features</a></li>
+        <li><a href="#">Find in this Sequence</a></li>
+      </ul>
+    </div>
+
+    <div class="side-box">
+      <h3 class="side-title">Related information</h3>
+      <ul class="side-links">
+        <li><a href="#">PubMed</a></li>
+        <li><a href="#">Taxonomy</a></li>
+        <li><a href="#">Gene</a></li>
+        <li><a href="#">OMIM</a></li>
+        <li><a href="#">GEO Profiles</a></li>
+      </ul>
+    </div>
+
+    <div class="side-box">
+      <h3 class="side-title">LinkOut to external resources</h3>
+      <ul class="side-links">
+        <li><a href="#">SILVA SSU Database</a> <span class="muted">[SILVA]</span></li>
+      </ul>
+    </div>
+  </aside>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
