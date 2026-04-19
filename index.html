@@ -1,301 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>National Center for Biotechnology Information</title>
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>National Center for Biotechnology Information</title>
+  <link rel="shortcut icon" href="https://www.ncbi.nlm.nih.gov/favicon.ico" />
+  <link rel="stylesheet" href="https://www.ncbi.nlm.nih.gov/home/components/normalize-css/normalize.css" />
+  <link rel="stylesheet" href="https://www.ncbi.nlm.nih.gov/home/components/ncbi-standards/standard_base.css" />
+  <link rel="stylesheet" href="https://www.ncbi.nlm.nih.gov/home/new_grid.css" />
+  <link rel="stylesheet" href="https://www.ncbi.nlm.nih.gov/home/homepage.css" />
+  <link rel="stylesheet" href="https://www.ncbi.nlm.nih.gov/home/legacy/page.css" />
+  <link rel="stylesheet" href="/ncbi.css" />
 </head>
 <body>
+  <div class="grid">
+    <div class="col twelve_col nomargin shadow">
+      <div class="wrap">
+        <div class="page">
+          <div data-section="header">
+            <div id="universal_header">
+              <section class="usa-banner">
+                <div class="usa-accordion">
+                  <header class="usa-banner-header">
+                    <div class="usa-grid usa-banner-inner">
+                      <img src="https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/favicons/favicon-57.png" alt="U.S. flag" />
+                      <p>An official website of the United States government</p>
+                      <button class="non-usa-accordion-button usa-banner-button" type="button" aria-expanded="false">
+                        <span class="usa-banner-button-text">Here's how you know</span>
+                      </button>
+                    </div>
+                  </header>
+                </div>
+              </section>
+              <div class="usa-overlay"></div>
+              <header class="ncbi-header" role="banner">
+                <div class="usa-grid">
+                  <div class="usa-width-one-whole">
+                    <div class="ncbi-header__logo">
+                      <a href="/" class="logo" aria-label="NCBI Logo">
+                        <img src="https://www.ncbi.nlm.nih.gov/coreutils/nwds/img/logos/AgencyLogo.svg" alt="NIH NLM Logo" />
+                      </a>
+                    </div>
+                    <div class="ncbi-header__account">
+                      <a href="#" class="usa-button header-button">Log in</a>
+                    </div>
+                  </div>
+                </div>
+              </header>
+            </div>
 
-<!-- Gov banner -->
-<section class="usa-banner">
-  <div class="usa-banner-inner">
-    <img src="https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/favicons/favicon-57.png" alt="U.S. flag" class="usa-flag" />
-    <p>An official website of the United States government</p>
-    <button class="usa-banner-button" type="button">
-      <span>Here's how you know</span>
-      <span class="caret">&#9662;</span>
-    </button>
+            <div class="header">
+              <div class="res_logo">
+                <h1 class="img_logo"><a href="/" title="NCBI">NCBI</a></h1>
+                <h2 class="res_tagline">National Center for Biotechnology Information</h2>
+              </div>
+              <div class="search">
+                <form method="get" action="/result.html" id="searchForm" autocomplete="off">
+                  <div class="search_form">
+                    <label for="database" class="offscreen_noflow">Search database</label>
+                    <select id="database" name="db">
+                      <option value="gquery">All Databases</option>
+                      <option value="assembly">Assembly</option>
+                      <option value="biocollections">Biocollections</option>
+                      <option value="bioproject">BioProject</option>
+                      <option value="biosample">BioSample</option>
+                      <option value="books">Books</option>
+                      <option value="clinvar">ClinVar</option>
+                      <option value="cdd">Conserved Domains</option>
+                      <option value="gap">dbGaP</option>
+                      <option value="dbvar">dbVar</option>
+                      <option value="gene">Gene</option>
+                      <option value="genome">Genome</option>
+                      <option value="gds">GEO DataSets</option>
+                      <option value="geoprofiles">GEO Profiles</option>
+                      <option value="gtr">GTR</option>
+                      <option value="ipg">Identical Protein Groups</option>
+                      <option value="medgen">MedGen</option>
+                      <option value="mesh">MeSH</option>
+                      <option value="nlmcatalog">NLM Catalog</option>
+                      <option value="nuccore">Nucleotide</option>
+                      <option value="omim">OMIM</option>
+                      <option value="pmc">PMC</option>
+                      <option value="protein">Protein</option>
+                      <option value="proteinclusters">Protein Clusters</option>
+                      <option value="protfam">Protein Family Models</option>
+                      <option value="pcassay">PubChem BioAssay</option>
+                      <option value="pccompound">PubChem Compound</option>
+                      <option value="pcsubstance">PubChem Substance</option>
+                      <option value="pubmed">PubMed</option>
+                      <option value="snp">SNP</option>
+                      <option value="sra">SRA</option>
+                      <option value="structure">Structure</option>
+                      <option value="taxonomy">Taxonomy</option>
+                    </select>
+                    <div class="nowrap">
+                      <label for="term" class="offscreen_noflow">Search term</label>
+                      <div class="nowrap">
+                        <input type="text" name="q" id="term" title="Search All Databases" value="" autocomplete="off" />
+                      </div>
+                      <button id="search" type="submit" class="button_search nowrap">Search</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div id="maincontent" class="content col twelve_col last">
+              <div class="col1">
+                <div class="col1inner">
+                  <div class="home_page" data-section="main">
+                    <div class="col twelve_col last">
+                      <h1>Welcome to NCBI</h1>
+                      <p>The National Center for Biotechnology Information advances science and health by providing access to biomedical and genomic information.</p>
+                      <ul class="about_links">
+                        <li><a href="https://www.ncbi.nlm.nih.gov/home/about/">About the NCBI</a> |</li>
+                        <li><a href="https://www.ncbi.nlm.nih.gov/home/about/mission/">Mission</a> |</li>
+                        <li><a href="https://www.ncbi.nlm.nih.gov/home/about/structure/">Organization</a> |</li>
+                        <li><a href="https://ncbiinsights.ncbi.nlm.nih.gov/">NCBI News &amp; Blog</a> |</li>
+                        <li><a href="https://beta.ncbi.nlm.nih.gov/">Visit the Beta Homepage</a></li>
+                      </ul>
+                    </div>
+                    <section class="action_bar black_text" data-section="action">
+                      <a id="home_submit" href="https://submit.ncbi.nlm.nih.gov/">
+                        <div class="col four_col submit">
+                          <h2>Submit</h2>
+                          <p>Deposit data or manuscripts into NCBI databases</p>
+                          <img class="gray-light" src="https://www.ncbi.nlm.nih.gov/home/images/icons/submit.svg" aria-hidden="true" alt="" />
+                          <span class="icon-fallback-text">Submit Icon</span>
+                        </div>
+                      </a>
+                      <a id="home_download" href="https://www.ncbi.nlm.nih.gov/home/download/">
+                        <div class="col four_col download">
+                          <h2>Download</h2>
+                          <p>Transfer NCBI data to your computer</p>
+                          <img class="gray-light" src="https://www.ncbi.nlm.nih.gov/home/images/icons/download.svg" aria-hidden="true" alt="" />
+                          <span class="icon-fallback-text">Download Icon</span>
+                        </div>
+                      </a>
+                      <a id="home_learn" href="https://www.ncbi.nlm.nih.gov/home/learn/">
+                        <div class="col four_col learn">
+                          <h2>Learn</h2>
+                          <p>Find help documents, attend a class or watch a tutorial</p>
+                          <img class="gray-light" src="https://www.ncbi.nlm.nih.gov/home/images/icons/learn.svg" aria-hidden="true" alt="" />
+                          <span class="icon-fallback-text">Books Icon</span>
+                        </div>
+                      </a>
+                      <a id="home_develop" href="https://www.ncbi.nlm.nih.gov/home/develop/">
+                        <div class="col four_col develop">
+                          <h2>Develop</h2>
+                          <p>Use NCBI APIs and code libraries to build applications</p>
+                          <img class="gray-light" src="https://www.ncbi.nlm.nih.gov/home/images/icons/develop.svg" aria-hidden="true" alt="" />
+                          <span class="icon-fallback-text">Develop Icon</span>
+                        </div>
+                      </a>
+                      <a id="home_analyze" href="https://www.ncbi.nlm.nih.gov/home/analyze/">
+                        <div class="col four_col analyze">
+                          <h2>Analyze</h2>
+                          <p>Identify an NCBI tool for your data analysis task</p>
+                          <img class="gray-light" src="https://www.ncbi.nlm.nih.gov/home/images/icons/analyze.svg" aria-hidden="true" alt="" />
+                          <span class="icon-fallback-text">Graph Icon</span>
+                        </div>
+                      </a>
+                      <a id="home_research" href="https://www.ncbi.nlm.nih.gov/research/">
+                        <div class="col four_col research">
+                          <h2>Research</h2>
+                          <p>Explore NCBI research and collaborative projects</p>
+                          <img class="gray-light" src="https://www.ncbi.nlm.nih.gov/home/images/icons/research.svg" aria-hidden="true" alt="" />
+                          <span class="icon-fallback-text">Microscope Icon</span>
+                        </div>
+                      </a>
+                    </section>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col2" data-section="categories">
+                <div id="gd-lcl-nav" class="gd-lcl-nav-howto" role="navigation">
+                  <ul>
+                    <li class="current"><a href="/" class="homelink">NCBI Home</a></li>
+                    <li class="before-divide"><a class="homelink" href="https://www.ncbi.nlm.nih.gov/guide/sitemap/">Resource List (A-Z)</a></li>
+                    <li class="nav-divide"></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/all/">All Resources</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/chemicals-bioassays/">Chemicals &amp; Bioassays</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/data-software/">Data &amp; Software</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/dna-rna/">DNA &amp; RNA</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/domains-structures/">Domains &amp; Structures</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/genes-expression/">Genes &amp; Expression</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/genetics-medicine/">Genetics &amp; Medicine</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/genomes-maps/">Genomes &amp; Maps</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/homology/">Homology</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/literature/">Literature</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/proteins/">Proteins</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/sequence-analysis/">Sequence Analysis</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/taxonomy/">Taxonomy</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/training-tutorials/">Training &amp; Tutorials</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/guide/variation/">Variation</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col3" data-section="discovery">
+                <div class="portlet brieflink" data-section="resources">
+                  <div class="portlet_head">
+                    <div class="portlet_title"><h3>Popular Resources</h3></div>
+                  </div>
+                  <div class="portlet_content">
+                    <ul>
+                      <li><a href="https://pubmed.ncbi.nlm.nih.gov/">PubMed</a></li>
+                      <li><a href="https://www.ncbi.nlm.nih.gov/books/">Bookshelf</a></li>
+                      <li><a href="https://pmc.ncbi.nlm.nih.gov/">PubMed Central</a></li>
+                      <li><a href="https://blast.ncbi.nlm.nih.gov/">BLAST</a></li>
+                      <li><a href="https://www.ncbi.nlm.nih.gov/nucleotide/">Nucleotide</a></li>
+                      <li><a href="https://www.ncbi.nlm.nih.gov/genome/">Genome</a></li>
+                      <li><a href="https://www.ncbi.nlm.nih.gov/snp/">SNP</a></li>
+                      <li><a href="https://www.ncbi.nlm.nih.gov/gene/">Gene</a></li>
+                      <li><a href="https://www.ncbi.nlm.nih.gov/protein/">Protein</a></li>
+                      <li><a href="https://pubchem.ncbi.nlm.nih.gov/">PubChem</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="portlet">
+                  <div class="portlet_head">
+                    <div class="portlet_title"><h3>NCBI News &amp; Blog</h3></div>
+                  </div>
+                  <div class="portlet_content">
+                    <ul>
+                      <li><a href="https://ncbiinsights.ncbi.nlm.nih.gov/2026/04/15/medgen-users-request-for-feedback/">MedGen Users: Request for Feedback!</a><div class="blog-date">15 Apr 2026</div></li>
+                      <li><a href="https://ncbiinsights.ncbi.nlm.nih.gov/2026/04/09/updated-bacterial-and-archaeal-reference-genome-collection/">Now Available: Updated Bacterial and Archaeal Reference Genome Collection</a><div class="blog-date">09 Apr 2026</div></li>
+                      <li><a href="https://ncbiinsights.ncbi.nlm.nih.gov/2026/03/26/preview-the-ncbi-beta-homepage-today/">Now Available! Preview the NCBI Beta Homepage Today</a><div class="blog-date">26 Mar 2026</div></li>
+                    </ul>
+                    <a href="https://ncbiinsights.ncbi.nlm.nih.gov/" class="seemore">More...</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer" id="footer">
+            <section class="icon-section">
+              <div id="icon-section-header" class="icon-section_header">Follow NCBI</div>
+              <div class="grid-container container">
+                <div class="icon-section_container">
+                  <a class="footer-icon" href="https://twitter.com/ncbi" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M6.06736 7L16.8778 20.8991L6.00001 32.2H10.2L18.6 23.1L25.668 32.2H34L22.8 17.5L31.9 7H28.4L20.7 15.4L14.401 7H6.06898H6.06736ZM9.66753 8.73423H12.9327L29.7327 30.4658H26.5697L9.66753 8.73423Z" fill="#5B616B"/></svg></a>
+                  <a class="footer-icon" href="https://www.facebook.com/ncbi.nlm" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 300 300"><path class="cls-11" d="M210.5,115.12H171.74V97.82c0-8.14,5.39-10,9.19-10h27.14V52l-39.32-.12c-35.66,0-42.42,26.68-42.42,43.77v19.48H99.09v36.32h27.24v109h45.41v-109h35Z"/></svg></a>
+                  <a class="footer-icon" href="https://www.linkedin.com/company/ncbinlm" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 300 300"><path class="cls-11" d="M101.64,243.37H57.79v-114h43.85Zm-22-131.54h-.26c-13.25,0-21.82-10.36-21.82-21.76,0-11.65,8.84-21.15,22.33-21.15S101.7,78.72,102,90.38C102,101.77,93.4,111.83,79.63,111.83Zm100.93,52.61A17.54,17.54,0,0,0,163,182v61.39H119.18s.51-105.23,0-114H163v13a54.33,54.33,0,0,1,34.54-12.66c26,0,44.39,18.8,44.39,55.29v58.35H198.1V182A17.54,17.54,0,0,0,180.56,164.44Z"/></svg></a>
+                  <a class="footer-icon" href="https://github.com/ncbi" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 300 300"><path class="cls-11" d="M151.36,47.28a105.76,105.76,0,0,0-33.43,206.1c5.28,1,7.22-2.3,7.22-5.09,0-2.52-.09-10.85-.14-19.69-29.42,6.4-35.63-12.48-35.63-12.48-4.81-12.22-11.74-15.47-11.74-15.47-9.59-6.56.73-6.43.73-6.43,10.61.75,16.21,10.9,16.21,10.9,9.43,16.17,24.73,11.49,30.77,8.79,1-6.83,3.69-11.5,6.71-14.14C108.57,197.1,83.88,188,83.88,147.51a40.92,40.92,0,0,1,10.9-28.39c-1.1-2.66-4.72-13.42,1-28,0,0,8.88-2.84,29.09,10.84a100.26,100.26,0,0,1,53,0C198,88.3,206.9,91.14,206.9,91.14c5.76,14.56,2.14,25.32,1,28a40.87,40.87,0,0,1,10.89,28.39c0,40.62-24.74,49.56-48.29,52.18,3.79,3.28,7.17,9.71,7.17,19.58,0,14.15-.12,25.54-.12,29,0,2.82,1.9,6.11,7.26,5.07A105.76,105.76,0,0,0,151.36,47.28Z"/></svg></a>
+                  <a class="footer-icon" href="https://ncbiinsights.ncbi.nlm.nih.gov/" aria-label="Blog"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M14,30a4,4,0,1,1-4-4,4,4,0,0,1,4,4Zm11,3A19,19,0,0,0,7.05,15a1,1,0,0,0-1,1v3a1,1,0,0,0,.93,1A14,14,0,0,1,20,33.07,1,1,0,0,0,21,34h3a1,1,0,0,0,1-1Zm9,0A28,28,0,0,0,7,6,1,1,0,0,0,6,7v3a1,1,0,0,0,1,1A23,23,0,0,1,29,33a1,1,0,0,0,1,1h3A1,1,0,0,0,34,33Z" fill="#737373"/></svg></a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
 
-<!-- NIH NLM Header -->
-<header class="ncbi-header">
-  <div class="ncbi-header-inner">
-    <div class="ncbi-header__logo">
-      <a href="/" class="logo">
-        <img src="https://www.ncbi.nlm.nih.gov/coreutils/nwds/img/logos/AgencyLogo.svg" alt="NIH NLM Logo" />
-      </a>
-    </div>
-    <div class="ncbi-header__account">
-      <a href="#" class="header-button">Log in</a>
-    </div>
-  </div>
-</header>
-
-<!-- Search bar -->
-<div class="search-section">
-  <form id="searchForm" class="search_form" action="result.html" method="get">
-    <label for="database" class="offscreen">Search database</label>
-    <select id="database" name="db">
-      <option value="gquery">All Databases</option>
-      <option value="assembly">Assembly</option>
-      <option value="bioproject">BioProject</option>
-      <option value="biosample">BioSample</option>
-      <option value="books">Books</option>
-      <option value="clinvar">ClinVar</option>
-      <option value="gene">Gene</option>
-      <option value="genome">Genome</option>
-      <option value="geoprofiles">GEO Profiles</option>
-      <option value="medgen">MedGen</option>
-      <option value="nuccore">Nucleotide</option>
-      <option value="omim">OMIM</option>
-      <option value="pmc">PMC</option>
-      <option value="protein">Protein</option>
-      <option value="pubmed">PubMed</option>
-      <option value="snp">SNP</option>
-      <option value="sra">SRA</option>
-      <option value="structure">Structure</option>
-      <option value="taxonomy">Taxonomy</option>
-    </select>
-    <div class="search-input-wrap">
-      <input type="text" name="q" id="searchInput" autocomplete="off" />
-    </div>
-    <button type="submit" class="button_search">Search</button>
-  </form>
-</div>
-
-<!-- Main 3-column layout -->
-<div class="page-container">
-
-  <!-- col1: main content (appears middle but in HTML first) -->
-  <div class="col1">
-    <div class="col1inner">
-      <div class="home_page">
-
-        <h1>Welcome to NCBI</h1>
-        <p>The National Center for Biotechnology Information advances science and health by providing access to biomedical and genomic information.</p>
-        <ul class="about_links">
-          <li><a href="#">About the NCBI</a> |</li>
-          <li><a href="#">Mission</a> |</li>
-          <li><a href="#">Organization</a> |</li>
-          <li><a href="#">NCBI News &amp; Blog</a> |</li>
-          <li><a href="#">Visit the Beta Homepage</a></li>
-        </ul>
-
-        <section class="action_bar">
-          <a id="home_submit" href="#">
-            <div class="col four_col">
-              <h2>Submit</h2>
-              <p>Deposit data or manuscripts into NCBI databases</p>
-              <img class="gray-light" src="https://www.ncbi.nlm.nih.gov/home/images/icons/submit.svg" alt="" />
-            </div>
-          </a>
-          <a id="home_download" href="#">
-            <div class="col four_col">
-              <h2>Download</h2>
-              <p>Transfer NCBI data to your computer</p>
-              <img class="gray-light" src="https://www.ncbi.nlm.nih.gov/home/images/icons/download.svg" alt="" />
-            </div>
-          </a>
-          <a id="home_learn" href="#">
-            <div class="col four_col">
-              <h2>Learn</h2>
-              <p>Find help documents, attend a class or watch a tutorial</p>
-              <img class="gray-light" src="https://www.ncbi.nlm.nih.gov/home/images/icons/learn.svg" alt="" />
-            </div>
-          </a>
-          <a id="home_develop" href="#">
-            <div class="col four_col">
-              <h2>Develop</h2>
-              <p>Use NCBI APIs and code libraries to build applications</p>
-              <img class="gray-light" src="https://www.ncbi.nlm.nih.gov/home/images/icons/develop.svg" alt="" />
-            </div>
-          </a>
-          <a id="home_analyze" href="#">
-            <div class="col four_col">
-              <h2>Analyze</h2>
-              <p>Identify an NCBI tool for your data analysis task</p>
-              <img class="gray-light" src="https://www.ncbi.nlm.nih.gov/home/images/icons/analyze.svg" alt="" />
-            </div>
-          </a>
-          <a id="home_research" href="#">
-            <div class="col four_col">
-              <h2>Research</h2>
-              <p>Explore NCBI research and collaborative projects</p>
-              <img class="gray-light" src="https://www.ncbi.nlm.nih.gov/home/images/icons/research.svg" alt="" />
-            </div>
-          </a>
-        </section>
-
-      </div>
-    </div>
-  </div><!-- /col1 -->
-
-  <!-- col2: left nav -->
-  <div class="col2">
-    <div id="gd-lcl-nav" class="gd-lcl-nav-howto">
-      <ul>
-        <li class="current"><a href="/" class="homelink">NCBI Home</a></li>
-        <li class="before-divide"><a class="homelink" href="#">Resource List (A-Z)</a></li>
-        <li class="nav-divide"></li>
-        <li><a href="#">All Resources</a></li>
-        <li><a href="#">Chemicals &amp; Bioassays</a></li>
-        <li><a href="#">Data &amp; Software</a></li>
-        <li><a href="#">DNA &amp; RNA</a></li>
-        <li><a href="#">Domains &amp; Structures</a></li>
-        <li><a href="#">Genes &amp; Expression</a></li>
-        <li><a href="#">Genetics &amp; Medicine</a></li>
-        <li><a href="#">Genomes &amp; Maps</a></li>
-        <li><a href="#">Homology</a></li>
-        <li><a href="#">Literature</a></li>
-        <li><a href="#">Proteins</a></li>
-        <li><a href="#">Sequence Analysis</a></li>
-        <li><a href="#">Taxonomy</a></li>
-        <li><a href="#">Training &amp; Tutorials</a></li>
-        <li><a href="#">Variation</a></li>
-      </ul>
-    </div>
-  </div><!-- /col2 -->
-
-  <!-- col3: right sidebar -->
-  <div class="col3">
-    <div class="portlet brieflink">
-      <div class="portlet_head">
-        <div class="portlet_title"><h3>Popular Resources</h3></div>
-      </div>
-      <div class="portlet_content">
-        <ul>
-          <li><a href="#">PubMed</a></li>
-          <li><a href="#">Bookshelf</a></li>
-          <li><a href="#">PubMed Central</a></li>
-          <li><a href="#">BLAST</a></li>
-          <li><a href="#">Nucleotide</a></li>
-          <li><a href="#">Genome</a></li>
-          <li><a href="#">SNP</a></li>
-          <li><a href="#">Gene</a></li>
-          <li><a href="#">Protein</a></li>
-          <li><a href="#">PubChem</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="portlet">
-      <div class="portlet_head">
-        <div class="portlet_title"><h3>NCBI News &amp; Blog</h3></div>
-      </div>
-      <div class="portlet_content">
-        <ul class="blog-list">
-          <li><a href="#">MedGen Users: Request for Feedback!</a><span class="blog-date">15 Apr 2026</span></li>
-          <li><a href="#">Now Available: Updated Bacterial and Archaeal Reference Genome Collection</a><span class="blog-date">09 Apr 2026</span></li>
-          <li><a href="#">Now Available! Preview the NCBI Beta Homepage Today</a><span class="blog-date">26 Mar 2026</span></li>
-        </ul>
-        <a href="#" class="more-link">More...</a>
-      </div>
-    </div>
-  </div><!-- /col3 -->
-
-</div><!-- /page-container -->
-
-<!-- FOOTER -->
-<div class="footer" id="footer">
-
-  <!-- Follow NCBI section -->
-  <section class="icon-section">
-    <div class="icon-section_header">Follow NCBI</div>
-    <div class="icon-section_container">
-      <a class="footer-icon" href="https://twitter.com/ncbi" aria-label="Twitter">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-          <path d="M6.06736 7L16.8778 20.8991L6.00001 32.2H10.2L18.6 23.1L25.668 32.2H34L22.8 17.5L31.9 7H28.4L20.7 15.4L14.401 7H6.06898H6.06736ZM9.66753 8.73423H12.9327L29.7327 30.4658H26.5697L9.66753 8.73423Z" fill="#5B616B"/>
-        </svg>
-      </a>
-      <a class="footer-icon" href="https://www.facebook.com/ncbi.nlm" aria-label="Facebook">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="40" height="40">
-          <path fill="#737373" fill-rule="evenodd" d="M210.5,115.12H171.74V97.82c0-8.14,5.39-10,9.19-10h27.14V52l-39.32-.12c-35.66,0-42.42,26.68-42.42,43.77v19.48H99.09v36.32h27.24v109h45.41v-109h35Z"/>
-        </svg>
-      </a>
-      <a class="footer-icon" href="https://www.linkedin.com/company/ncbinlm" aria-label="LinkedIn">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="40" height="40">
-          <path fill="#737373" fill-rule="evenodd" d="M101.64,243.37H57.79v-114h43.85Zm-22-131.54h-.26c-13.25,0-21.82-10.36-21.82-21.76,0-11.65,8.84-21.15,22.33-21.15S101.7,78.72,102,90.38C102,101.77,93.4,111.83,79.63,111.83Zm100.93,52.61A17.54,17.54,0,0,0,163,182v61.39H119.18s.51-105.23,0-114H163v13a54.33,54.33,0,0,1,34.54-12.66c26,0,44.39,18.8,44.39,55.29v58.35H198.1V182A17.54,17.54,0,0,0,180.56,164.44Z"/>
-        </svg>
-      </a>
-      <a class="footer-icon" href="https://github.com/ncbi" aria-label="GitHub">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="40" height="40">
-          <path fill="#737373" fill-rule="evenodd" d="M151.36,47.28a105.76,105.76,0,0,0-33.43,206.1c5.28,1,7.22-2.3,7.22-5.09,0-2.52-.09-10.85-.14-19.69-29.42,6.4-35.63-12.48-35.63-12.48-4.81-12.22-11.74-15.47-11.74-15.47-9.59-6.56.73-6.43.73-6.43,10.61.75,16.21,10.9,16.21,10.9,9.43,16.17,24.73,11.49,30.77,8.79,1-6.83,3.69-11.5,6.71-14.14C108.57,197.1,83.88,188,83.88,147.51a40.92,40.92,0,0,1,10.9-28.39c-1.1-2.66-4.72-13.42,1-28,0,0,8.88-2.84,29.09,10.84a100.26,100.26,0,0,1,53,0C198,88.3,206.9,91.14,206.9,91.14c5.76,14.56,2.14,25.32,1,28a40.87,40.87,0,0,1,10.89,28.39c0,40.62-24.74,49.56-48.29,52.18,3.79,3.28,7.17,9.71,7.17,19.58,0,14.15-.12,25.54-.12,29,0,2.82,1.9,6.11,7.26,5.07A105.76,105.76,0,0,0,151.36,47.28Z"/>
-        </svg>
-      </a>
-      <a class="footer-icon" href="https://ncbiinsights.ncbi.nlm.nih.gov/" aria-label="Blog">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
-          <path fill="#737373" d="M14,30a4,4,0,1,1-4-4,4,4,0,0,1,4,4Zm11,3A19,19,0,0,0,7.05,15a1,1,0,0,0-1,1v3a1,1,0,0,0,.93,1A14,14,0,0,1,20,33.07,1,1,0,0,0,21,34h3a1,1,0,0,0,1-1Zm9,0A28,28,0,0,0,7,6,1,1,0,0,0,6,7v3a1,1,0,0,0,1,1A23,23,0,0,1,29,33a1,1,0,0,0,1,1h3A1,1,0,0,0,34,33Z"/>
-        </svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- Blue NLM section -->
-  <section class="footer-bg-primary">
-    <div class="footer-bg-inner">
-      <div class="footer-col">
-        <p><a class="text-white" href="#">Connect with NLM</a></p>
-        <ul class="social_media">
-          <li>
-            <a href="https://twitter.com/NLM_NIH" aria-label="Twitter" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 36 35" fill="none">
-                <path d="M17.5006 34.6565C26.9761 34.6565 34.6575 26.9751 34.6575 17.4996C34.6575 8.02416 26.9761 0.342773 17.5006 0.342773C8.02514 0.342773 0.34375 8.02416 0.34375 17.4996C0.34375 26.9751 8.02514 34.6565 17.5006 34.6565Z" fill="#205493" stroke="white" stroke-width="1"/>
-                <path d="M8.54811 8.5L16.2698 18.4279L8.50001 26.5H11.5L17.5 20L22.5486 26.5H28.5L20.5 16L27 8.5H24.5L19 14.5L14.5007 8.5H8.54927H8.54811ZM11.1197 9.73873H13.4519L25.4519 25.2613H23.1926L11.1197 9.73873Z" fill="white"/>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/nationallibraryofmedicine" aria-label="Facebook" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 36 35" fill="none">
-                <path d="M15.1147 29.1371V18.9414H11.8183V14.9518H15.1215V11.7492C15.1274 10.9262 15.3148 10.1146 15.6706 9.37241C16.1301 8.38271 16.9475 7.60378 17.9582 7.19235C18.6492 6.90525 19.3923 6.76428 20.1405 6.7783C21.0029 6.79202 21.8653 6.83091 22.7278 6.86065C23.2974 6.90182 23.3271 6.94071 23.3271 7.02993V10.5116H21.2271C20.9287 10.5184 20.6316 10.5528 20.3395 10.6146C19.8463 11.1668 19.2575 11.6669 19.2575 12.3531V14.9564H23.0229L22.698 18.7332H19.2644V29.1394L15.1147 29.1371Z" fill="white"/>
-                <path d="M17.5006 34.657C26.9761 34.657 34.6575 26.9756 34.6575 17.5001C34.6575 8.02465 26.9761 0.343262 17.5006 0.343262C8.02514 0.343262 0.34375 8.02465 0.34375 17.5001C0.34375 26.9756 8.02514 34.657 17.5006 34.657Z" stroke="white" stroke-width="1"/>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/user/NLMNIH" aria-label="Youtube" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 36 35" fill="none">
-                <path d="M26.2571 11.4791C25.9025 11.1589 25.5709 10.9576 24.228 10.834C22.5512 10.6785 20.2797 10.6556 18.564 10.6533H16.4365C14.7208 10.6533 12.4493 10.6785 10.7725 10.834C9.43196 10.9576 9.09798 11.1589 8.7434 11.4791C7.81464 12.321 7.6202 14.6268 7.59961 16.8938V18.1635C7.62706 20.4121 7.82837 22.686 8.7434 23.521C9.09798 23.8412 9.42967 24.0425 10.7725 24.1661C12.4493 24.3216 14.7208 24.3445 16.4365 24.3468H18.564C20.2797 24.3468 22.5512 24.3216 24.228 24.1661C25.5686 24.0425 25.9025 23.8412 26.2571 23.521C27.1722 22.6929 27.3735 20.451 27.4009 18.2206V16.7795C27.3735 14.5491 27.1699 12.3072 26.2571 11.4791ZM15.5604 20.5311V14.652L20.561 17.5001L15.5604 20.5311Z" fill="white"/>
-                <path d="M17.5006 34.657C26.9761 34.657 34.6575 26.9756 34.6575 17.5001C34.6575 8.02465 26.9761 0.343262 17.5006 0.343262C8.02514 0.343262 0.34375 8.02465 0.34375 17.5001C0.34375 26.9756 8.02514 34.657 17.5006 34.657Z" stroke="white" stroke-width="1"/>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <p class="text-white">National Library of Medicine<br />
-          <a href="#" class="text-white">8600 Rockville Pike<br />Bethesda, MD 20894</a>
-        </p>
-      </div>
-      <div class="footer-col">
-        <p>
-          <a href="#" class="text-white">Web Policies</a><br />
-          <a href="#" class="text-white">FOIA</a><br />
-          <a href="#" class="text-white">HHS Vulnerability Disclosure</a>
-        </p>
-      </div>
-      <div class="footer-col">
-        <p>
-          <a href="#" class="text-white">Help</a><br />
-          <a href="#" class="text-white">Accessibility</a><br />
-          <a href="#" class="text-white">Careers</a>
-        </p>
-      </div>
-    </div>
-    <div class="footer-bottom-links">
-      <ul>
-        <li><a class="text-white" href="https://www.nlm.nih.gov/">NLM</a></li>
-        <li><a class="text-white" href="https://www.nih.gov/">NIH</a></li>
-        <li><a class="text-white" href="https://www.hhs.gov/">HHS</a></li>
-        <li><a class="text-white" href="https://www.usa.gov/">USA.gov</a></li>
-      </ul>
-    </div>
-  </section>
-
-</div><!-- /footer -->
-
-<script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>

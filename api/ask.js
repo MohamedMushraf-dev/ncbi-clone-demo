@@ -25,22 +25,34 @@ export default async function handler(req, res) {
   }
 
   try {
-    const upstream = await fetch("https://api.openai.com/v1/chat/completions", {
+    const upstream = await fetch("https://api.openai.com/v1/responses", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + apiKey,
       },
       body: JSON.stringify({
-        model: "gpt-3.5-turbo",
-        messages: [
+        model: "gpt-4.1-mini",
+        input: [
           {
             role: "system",
-            content: "You are a helpful assistant. Answer concisely in plain text.",
+            content: [
+              {
+                type: "input_text",
+                text: "You are a helpful assistant. Answer concisely in plain text.",
+              },
+            ],
           },
-          { role: "user", content: q },
+          {
+            role: "user",
+            content: [
+              {
+                type: "input_text",
+                text: q,
+              },
+            ],
+          },
         ],
-        temperature: 0.7,
       }),
     });
 
@@ -52,13 +64,7 @@ export default async function handler(req, res) {
     }
 
     const data = await upstream.json();
-    const answer =
-      (data &&
-        data.choices &&
-        data.choices[0] &&
-        data.choices[0].message &&
-        data.choices[0].message.content) ||
-      "(empty response)";
+    const answer = (data && data.output_text) || "(empty response)";
 
     res.setHeader("Cache-Control", "no-store");
     return res.status(200).json({ answer: answer.trim() });

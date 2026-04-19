@@ -1,0 +1,65 @@
+body {
+  min-width: 1000px;
+}
+
+.usa-banner-button,
+.portlet_shutter,
+.display_settings a,
+.send_to a,
+.searchlinks a {
+  cursor: default;
+}
+
+#searchForm .search_form,
+#resultSearchForm .search_form {
+  display: flex;
+  align-items: center;
+}
+
+#searchForm .nowrap,
+#resultSearchForm .nowrap {
+  display: flex;
+  align-items: center;
+}
+
+#searchForm input[type="text"],
+#resultSearchForm input[type="text"] {
+  box-sizing: border-box;
+}
+
+.blog-date {
+  display: block;
+}
+
+.ncbi-local-record {
+  border-top: 1px solid #d7d7d7;
+  padding-top: 8px;
+}
+
+.ncbi-local-record pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.ref2-answer {
+  white-space: pre-wrap;
+}
+
+/* Result page: contain the nine_col + three_col floats */
+.result-row {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 10px;
+}
+
+/* Sidebar portlet styles for result page */
+.supplemental .portlet_title h3 {
+  color: #724128;
+}
+.supplemental .portlet_content ul li a {
+  color: #2f4a8b;
+}

@@ -1,126 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Nucleotide - NCBI</title>
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Human ribosomal DNA complete repeating unit - Nucleotide - NCBI</title>
+  <link rel="shortcut icon" href="https://www.ncbi.nlm.nih.gov/favicon.ico" />
+  <link rel="stylesheet" href="https://static.pubmed.gov/portal/portal3rc.fcgi/4218191/css/4207974/4206132.css" />
+  <link rel="stylesheet" href="https://static.pubmed.gov/portal/portal3rc.fcgi/4231937/css/3808861/3917732/3974050/3751656/3395415/14534/4062871/4186458/4231532/4075711/12930/4033350/4128070/3861632/4200659/4197480/4201891/4091728/3257261/3325043/3325044/9685/2279/3395586/2744335.css" />
+  <link rel="stylesheet" href="/ncbi.css" />
 </head>
 <body>
-
-<header class="nih-header">
-  <div class="nih-header-inner">
-    <div class="nih-brand">
-      <div class="nih-logo">NIH<span class="logo-arrow">&#9656;</span></div>
-      <div class="nih-titles">
-        <div class="nih-title">National Library of Medicine</div>
-        <div class="nih-subtitle">National Center for Biotechnology Information</div>
+  <div id="universal_header">
+    <section class="usa-banner">
+      <div class="usa-accordion">
+        <header class="usa-banner-header">
+          <div class="usa-grid usa-banner-inner">
+            <img src="https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/favicons/favicon-57.png" alt="U.S. flag" />
+            <p>An official website of the United States government</p>
+            <button class="non-usa-accordion-button usa-banner-button" type="button" aria-expanded="false">
+              <span class="usa-banner-button-text">Here's how you know</span>
+            </button>
+          </div>
+        </header>
       </div>
-    </div>
-    <button class="login-btn">Log in</button>
+    </section>
+    <div class="usa-overlay"></div>
+    <header class="ncbi-header" role="banner">
+      <div class="usa-grid">
+        <div class="usa-width-one-whole">
+          <div class="ncbi-header__logo">
+            <a href="/" class="logo" aria-label="NCBI Logo">
+              <img src="https://www.ncbi.nlm.nih.gov/coreutils/nwds/img/logos/AgencyLogo.svg" alt="NIH NLM Logo" />
+            </a>
+          </div>
+          <div class="ncbi-header__account">
+            <a href="#" class="usa-button header-button">Log in</a>
+          </div>
+        </div>
+      </div>
+    </header>
   </div>
-</header>
 
-<section class="result-search-row">
-  <div class="result-search-inner">
-    <span class="db-label">Nucleotide</span>
-    <form id="resultSearchForm" class="search-form result-form" action="result.html" method="get">
-      <select name="db" class="db-select">
-        <option>Nucleotide</option>
-        <option>All Databases</option>
-        <option>PubMed</option>
-        <option>Protein</option>
-      </select>
-      <input type="text" name="q" id="resultSearchInput" class="search-input" />
-      <button type="submit" class="search-btn">Search</button>
-    </form>
-    <a href="#" class="help-link">Help</a>
-    <div class="advanced"><a href="#">Advanced</a></div>
-  </div>
-</section>
-
-<main class="result-layout">
-  <section class="result-main">
-    <div class="genbank-line"><a href="#">GenBank &#9662;</a></div>
-    <h1 class="result-title">Human ribosomal DNA complete repeating unit</h1>
-    <div class="result-sub">GenBank: U13369.1</div>
-    <div class="result-actions">
-      <a href="#">FASTA</a>
-      <a href="#">Graphics</a>
+  <div class="header">
+    <div class="res_logo"><h1 class="res_name"><a href="/result.html">Nucleotide</a></h1></div>
+    <div class="search">
+      <form id="resultSearchForm" method="get" action="/result.html" autocomplete="off">
+        <div class="search_form">
+          <label for="database" class="offscreen_noflow">Search database</label>
+          <select id="database" name="db">
+            <option value="gquery">All Databases</option>
+            <option value="assembly">Assembly</option>
+            <option value="biocollections">Biocollections</option>
+            <option value="bioproject">BioProject</option>
+            <option value="biosample">BioSample</option>
+            <option value="books">Books</option>
+            <option value="clinvar">ClinVar</option>
+            <option value="cdd">Conserved Domains</option>
+            <option value="gap">dbGaP</option>
+            <option value="dbvar">dbVar</option>
+            <option value="gene">Gene</option>
+            <option value="genome">Genome</option>
+            <option value="gds">GEO DataSets</option>
+            <option value="geoprofiles">GEO Profiles</option>
+            <option value="gtr">GTR</option>
+            <option value="ipg">Identical Protein Groups</option>
+            <option value="medgen">MedGen</option>
+            <option value="mesh">MeSH</option>
+            <option value="nlmcatalog">NLM Catalog</option>
+            <option value="nuccore" selected="selected">Nucleotide</option>
+            <option value="omim">OMIM</option>
+            <option value="pmc">PMC</option>
+            <option value="protein">Protein</option>
+            <option value="proteinclusters">Protein Clusters</option>
+            <option value="protfam">Protein Family Models</option>
+            <option value="pcassay">PubChem BioAssay</option>
+            <option value="pccompound">PubChem Compound</option>
+            <option value="pcsubstance">PubChem Substance</option>
+            <option value="pubmed">PubMed</option>
+            <option value="snp">SNP</option>
+            <option value="sra">SRA</option>
+            <option value="structure">Structure</option>
+            <option value="taxonomy">Taxonomy</option>
+          </select>
+          <div class="nowrap">
+            <label for="term" class="offscreen_noflow">Search term</label>
+            <div class="nowrap">
+              <input type="text" name="q" id="term" title="Search Nucleotide" value="" autocomplete="off" />
+            </div>
+            <button id="search" type="submit" class="button_search nowrap">Search</button>
+          </div>
+        </div>
+        <ul class="searchlinks inline_list">
+          <li><a href="https://www.ncbi.nlm.nih.gov/nuccore/advanced">Advanced</a></li>
+          <li class="help"><a href="https://www.ncbi.nlm.nih.gov/books/NBK44864/">Help</a></li>
+        </ul>
+      </form>
     </div>
-    <hr class="thin-rule" />
-    <div class="goto"><a href="#">Go to:</a> <span class="caret">&#9662;</span></div>
+  </div>
 
-    <pre class="genbank-block">
-<span class="gb-key">LOCUS</span>       HSU13369                42999 bp    DNA     linear   PRI 12-MAR-2010
-<span class="gb-key">DEFINITION</span>  Human ribosomal DNA complete repeating unit.
-<span class="gb-key">ACCESSION</span>   U13369
-<span class="gb-key">VERSION</span>     U13369.1
-<span class="gb-key">KEYWORDS</span>    18S rRNA; 28S rRNA; 5.8S rRNA; 5'ETS; 3'ETS; ITS1; ITS2; intergenic
+  <div class="result-row">
+  <div id="maincontent" class="col nine_col">
+    <div class="content">
+      <div class="results_settings one_setting long_list">
+        <ul class="inline_list left display_settings">
+          <li><a href="#">GenBank<span class="tgt_dark"></span></a></li>
+        </ul>
+        <h4 class="content_header send_to align_right">
+          <a href="#" class="tgt_dark">Send to:</a>
+        </h4>
+      </div>
+
+      <div class="seqrprt seqviewer">
+        <div class="rprtheader">
+          <h1>Human ribosomal DNA complete repeating unit</h1>
+          <p class="itemid">GenBank: U13369.1</p>
+          <p class="aux">
+            <span class="rprtlinks">
+              <a class="dblinks" href="#">FASTA</a>
+              <a class="dblinks" href="#">Graphics</a>
+            </span>
+          </p>
+        </div>
+
+        <div class="ncbi-local-record">
+<pre>LOCUS       HSU13369                42999 bp    DNA     linear   PRI 12-MAR-2010
+DEFINITION  Human ribosomal DNA complete repeating unit.
+ACCESSION   U13369
+VERSION     U13369.1
+KEYWORDS    18S rRNA; 28S rRNA; 5.8S rRNA; 5'ETS; 3'ETS; ITS1; ITS2; intergenic
             spacer; cdc27 pseudogene; p53 binding site.
-<span class="gb-key">SOURCE</span>      Homo sapiens (human)
-  <span class="gb-key">ORGANISM</span>  <a href="#">Homo sapiens</a>
+SOURCE      Homo sapiens (human)
+  ORGANISM  <a href="#">Homo sapiens</a>
             Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
             Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
             Catarrhini; Hominidae; Homo.
-<span class="gb-key">REFERENCE</span>   1  (bases 1 to 42999)
-  <span class="gb-key">AUTHORS</span>   Nazar,R.N., Sitz,T.O. and Busch,H.
-  <span class="gb-key">TITLE</span>     Sequence homologies in mammalian 5.8S ribosomal RNA
-  <span class="gb-key">JOURNAL</span>   Biochemistry 15 (3), 505-508 (1976)
-   <span class="gb-key">PUBMED</span>   <a href="#">1252408</a>
-<span class="gb-key">REFERENCE</span>   2  (bases 1 to 42999)
-  <span class="gb-key">AUTHORS</span>   <span id="ref2-authors">OpenAI, GPT-3.5-turbo.</span>
-  <span class="gb-key">TITLE</span>     <span id="ref2-title">Loading answer&hellip;</span>
-  <span class="gb-key">JOURNAL</span>   <span id="ref2-journal">AI Generated Response (<span id="ref2-date">2026</span>)</span>
-   <span class="gb-key">QUERY</span>    <span id="ref2-query">&mdash;</span>
-   <span class="gb-key">ANSWER</span>   <span id="ref2-answer" class="ref2-answer">Waiting for OpenAI&hellip;</span>
-<span class="gb-key">REFERENCE</span>   3  (bases 1 to 42999)
-  <span class="gb-key">AUTHORS</span>   Miesfeld,R. and Arnheim,N.
-  <span class="gb-key">TITLE</span>     Identification of the in vivo and in vitro origin of transcription
+REFERENCE   1  (bases 1 to 42999)
+  AUTHORS   Nazar,R.N., Sitz,T.O. and Busch,H.
+  TITLE     Sequence homologies in mammalian 5.8S ribosomal RNA
+  JOURNAL   Biochemistry 15 (3), 505-508 (1976)
+   PUBMED   <a href="#">1252408</a>
+REFERENCE   2  (bases 1 to 42999)
+  AUTHORS   <span id="ref2-authors">OpenAI, GPT-4.1-mini.</span>
+  TITLE     <span id="ref2-title">Loading answer...</span>
+  JOURNAL   <span id="ref2-journal">AI Generated Response (<span id="ref2-date">2026</span>)</span>
+   QUERY    <span id="ref2-query">-</span>
+   ANSWER   <span id="ref2-answer" class="ref2-answer">Waiting for OpenAI...</span>
+REFERENCE   3  (bases 1 to 42999)
+  AUTHORS   Miesfeld,R. and Arnheim,N.
+  TITLE     Identification of the in vivo and in vitro origin of transcription
             in human rDNA
-  <span class="gb-key">JOURNAL</span>   Nucleic Acids Res. 10 (13), 3933-3949 (1982)
-   <span class="gb-key">PUBMED</span>   <a href="#">7050913</a>
-</pre>
-  </section>
-
-  <aside class="result-sidebar">
-    <div class="side-panel">
-      <div class="panel-head">Change region shown <span class="caret">&#9662;</span></div>
+  JOURNAL   Nucleic Acids Res. 10 (13), 3933-3949 (1982)
+   PUBMED   <a href="#">7050913</a></pre>
+        </div>
+      </div>
     </div>
-    <div class="side-panel">
-      <div class="panel-head">Customize view <span class="caret">&#9662;</span></div>
-    </div>
+  </div>
 
-    <div class="side-box">
-      <h3 class="side-title">Analyze this sequence</h3>
-      <ul class="side-links">
-        <li><a href="#">Run BLAST</a></li>
-        <li><a href="#">Pick Primers</a></li>
-        <li><a href="#">Highlight Sequence Features</a></li>
-        <li><a href="#">Find in this Sequence</a></li>
-      </ul>
+  <div class="supplemental col three_col last" id="supplemental">
+    <div class="portlet ctrl">
+      <div class="portlet_head">
+        <div class="portlet_title"><h3>Change region shown</h3></div>
+        <a href="#" class="portlet_shutter shutter_closed" title="Show/hide content"></a>
+      </div>
     </div>
 
-    <div class="side-box">
-      <h3 class="side-title">Related information</h3>
-      <ul class="side-links">
-        <li><a href="#">PubMed</a></li>
-        <li><a href="#">Taxonomy</a></li>
-        <li><a href="#">Gene</a></li>
-        <li><a href="#">OMIM</a></li>
-        <li><a href="#">GEO Profiles</a></li>
-      </ul>
+    <div class="portlet ctrl">
+      <div class="portlet_head">
+        <div class="portlet_title"><h3>Customize view</h3></div>
+        <a href="#" class="portlet_shutter shutter_closed" title="Show/hide content"></a>
+      </div>
     </div>
 
-    <div class="side-box">
-      <h3 class="side-title">LinkOut to external resources</h3>
-      <ul class="side-links">
-        <li><a href="#">SILVA SSU Database</a> <span class="muted">[SILVA]</span></li>
-      </ul>
+    <div class="portlet brieflink">
+      <div class="portlet_head">
+        <div class="portlet_title"><h3>Analyze this sequence</h3></div>
+        <a href="#" class="portlet_shutter" title="Show/hide content"></a>
+      </div>
+      <div class="portlet_content">
+        <ul>
+          <li><a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE=Nucleotides&amp;PROGRAM=blastn&amp;QUERY=U13369.1&amp;DATABASE=nr&amp;MEGABLAST=on&amp;BLAST_PROGRAMS=megaBlast&amp;LINK_LOC=nuccore&amp;PAGE_TYPE=BlastSearch">Run BLAST</a></li>
+          <li><a href="https://www.ncbi.nlm.nih.gov/tools/primer-blast/index.cgi?ORGANISM=9606&amp;INPUT_SEQUENCE=U13369.1&amp;LINK_LOC=nuccore">Pick Primers</a></li>
+          <li><a href="#">Highlight Sequence Features</a></li>
+          <li><a href="#">Find in this Sequence</a></li>
+        </ul>
+      </div>
     </div>
-  </aside>
-</main>
 
-<script src="script.js"></script>
+    <div class="portlet brieflink">
+      <div class="portlet_head">
+        <div class="portlet_title"><h3>Related information</h3></div>
+        <a href="#" class="portlet_shutter" title="Show/hide content"></a>
+      </div>
+      <div class="portlet_content">
+        <ul>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/">PubMed</a></li>
+          <li><a href="https://www.ncbi.nlm.nih.gov/taxonomy">Taxonomy</a></li>
+          <li><a href="https://www.ncbi.nlm.nih.gov/gene">Gene</a></li>
+          <li><a href="https://www.ncbi.nlm.nih.gov/omim">OMIM</a></li>
+          <li><a href="https://www.ncbi.nlm.nih.gov/geoprofiles">GEO Profiles</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="portlet brieflink">
+      <div class="portlet_head">
+        <div class="portlet_title"><h3>LinkOut to external resources</h3></div>
+        <a href="#" class="portlet_shutter" title="Show/hide content"></a>
+      </div>
+      <div class="portlet_content">
+        <ul>
+          <li class="two_line"><a href="http://www.arb-silva.de/browser/ssu/U13369">SILVA SSU Database</a> <span class="source">[SILVA]</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div><!-- /result-row -->
+
+  <div class="footer" id="footer">
+    <section class="icon-section">
+      <div id="icon-section-header" class="icon-section_header">Follow NCBI</div>
+      <div class="grid-container container">
+        <div class="icon-section_container">
+          <a class="footer-icon" href="https://twitter.com/ncbi" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M6.06736 7L16.8778 20.8991L6.00001 32.2H10.2L18.6 23.1L25.668 32.2H34L22.8 17.5L31.9 7H28.4L20.7 15.4L14.401 7H6.06898H6.06736ZM9.66753 8.73423H12.9327L29.7327 30.4658H26.5697L9.66753 8.73423Z" fill="#5B616B"/></svg></a>
+          <a class="footer-icon" href="https://www.facebook.com/ncbi.nlm" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 300 300"><path class="cls-11" d="M210.5,115.12H171.74V97.82c0-8.14,5.39-10,9.19-10h27.14V52l-39.32-.12c-35.66,0-42.42,26.68-42.42,43.77v19.48H99.09v36.32h27.24v109h45.41v-109h35Z"/></svg></a>
+          <a class="footer-icon" href="https://www.linkedin.com/company/ncbinlm" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 300 300"><path class="cls-11" d="M101.64,243.37H57.79v-114h43.85Zm-22-131.54h-.26c-13.25,0-21.82-10.36-21.82-21.76,0-11.65,8.84-21.15,22.33-21.15S101.7,78.72,102,90.38C102,101.77,93.4,111.83,79.63,111.83Zm100.93,52.61A17.54,17.54,0,0,0,163,182v61.39H119.18s.51-105.23,0-114H163v13a54.33,54.33,0,0,1,34.54-12.66c26,0,44.39,18.8,44.39,55.29v58.35H198.1V182A17.54,17.54,0,0,0,180.56,164.44Z"/></svg></a>
+          <a class="footer-icon" href="https://github.com/ncbi" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 300 300"><path class="cls-11" d="M151.36,47.28a105.76,105.76,0,0,0-33.43,206.1c5.28,1,7.22-2.3,7.22-5.09,0-2.52-.09-10.85-.14-19.69-29.42,6.4-35.63-12.48-35.63-12.48-4.81-12.22-11.74-15.47-11.74-15.47-9.59-6.56.73-6.43.73-6.43,10.61.75,16.21,10.9,16.21,10.9,9.43,16.17,24.73,11.49,30.77,8.79,1-6.83,3.69-11.5,6.71-14.14C108.57,197.1,83.88,188,83.88,147.51a40.92,40.92,0,0,1,10.9-28.39c-1.1-2.66-4.72-13.42,1-28,0,0,8.88-2.84,29.09,10.84a100.26,100.26,0,0,1,53,0C198,88.3,206.9,91.14,206.9,91.14c5.76,14.56,2.14,25.32,1,28a40.87,40.87,0,0,1,10.89,28.39c0,40.62-24.74,49.56-48.29,52.18,3.79,3.28,7.17,9.71,7.17,19.58,0,14.15-.12,25.54-.12,29,0,2.82,1.9,6.11,7.26,5.07A105.76,105.76,0,0,0,151.36,47.28Z"/></svg></a>
+          <a class="footer-icon" href="https://ncbiinsights.ncbi.nlm.nih.gov/" aria-label="Blog"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><path d="M14,30a4,4,0,1,1-4-4,4,4,0,0,1,4,4Zm11,3A19,19,0,0,0,7.05,15a1,1,0,0,0-1,1v3a1,1,0,0,0,.93,1A14,14,0,0,1,20,33.07,1,1,0,0,0,21,34h3a1,1,0,0,0,1-1Zm9,0A28,28,0,0,0,7,6,1,1,0,0,0,6,7v3a1,1,0,0,0,1,1A23,23,0,0,1,29,33a1,1,0,0,0,1,1h3A1,1,0,0,0,34,33Z" fill="#737373"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
