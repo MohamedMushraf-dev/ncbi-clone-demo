@@ -10,27 +10,141 @@ body {
   cursor: default;
 }
 
-#searchForm .search_form,
-#resultSearchForm .search_form {
+/* ── .header bar (gray search section on both pages) ── */
+.header {
+  background: #d5d5d5;
+  border-bottom: 1px solid #bbb;
+  padding: 0 20px;
+  position: relative;
   display: flex;
+  align-items: stretch;
+  min-height: 52px;
+}
+
+/* res_logo: fixed width on left */
+.res_logo {
+  display: flex !important;
+  align-items: center;
+  flex-shrink: 0;
+  width: 11.5em;
+  padding: 6px 0;
+}
+.res_logo .img_logo,
+.res_logo .res_name {
+  margin: 0;
+  font-weight: normal;
+}
+.res_logo .img_logo a {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+.res_logo .res_tagline {
+  font-size: 0.8em;
+  color: #555;
+  display: block;
+  line-height: 1.2;
+}
+.res_logo .res_name a {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+.res_logo .res_name a:hover { text-decoration: underline; }
+
+/* search div: takes remaining width */
+.header .search {
+  flex: 1;
+  padding: 8px 0 6px;
+  margin: 0;
+}
+
+/* search_form: full width flex row */
+.header .search_form {
+  display: flex !important;
+  align-items: center;
+  width: 100%;
+}
+
+/* select box */
+.header .search_form select {
+  height: 22px;
+  font-size: 13px;
+  padding: 0 4px;
+  border: 1px solid #999;
+  border-right: none;
+  border-radius: 2px 0 0 2px;
+  background: #fff;
+  font-family: arial, helvetica, sans-serif;
+  flex-shrink: 0;
+}
+
+/* outer nowrap (contains inner-nowrap + button): takes all remaining space */
+.header .search_form > div.nowrap {
+  flex: 1;
+  display: flex !important;
   align-items: center;
 }
 
-#searchForm .nowrap,
-#resultSearchForm .nowrap {
+/* inner nowrap (contains just the input): stretches */
+.header .search_form > div.nowrap > div.nowrap {
+  flex: 1;
   display: flex;
-  align-items: center;
 }
 
-#searchForm input[type="text"],
-#resultSearchForm input[type="text"] {
+/* text input: full width */
+.header .search_form > div.nowrap > div.nowrap input[type="text"] {
+  flex: 1;
+  width: 100%;
+  height: 22px;
+  border: 1px solid #999;
+  border-right: none;
+  padding: 0 6px;
+  font-size: 13px;
+  font-family: arial, helvetica, sans-serif;
+  outline: none;
   box-sizing: border-box;
 }
 
+/* Search button */
+.header .search_form button.button_search {
+  height: 22px;
+  padding: 0 14px;
+  background: #4477aa;
+  color: #fff;
+  border: none;
+  border-radius: 0 2px 2px 0;
+  font-size: 13px;
+  font-family: arial, helvetica, sans-serif;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: .1em .1em .1em rgba(0,0,0,.5);
+}
+.header .search_form button.button_search:hover { background: #245a87; }
+
+/* searchlinks (Advanced / Help) below search form */
+.header .searchlinks,
+.header .inline_list {
+  display: flex;
+  gap: 10px;
+  margin-top: 3px;
+  list-style: none;
+  padding: 0;
+  font-size: 12px;
+}
+.header .searchlinks li,
+.header .inline_list li { list-style: none; }
+.header .searchlinks a { color: #2f4a8b; text-decoration: none; }
+.header .searchlinks a:hover { text-decoration: underline; }
+
+/* ── Blog date display ── */
 .blog-date {
   display: block;
 }
 
+/* ── GenBank pre block on result page ── */
 .ncbi-local-record {
   border-top: 1px solid #d7d7d7;
   padding-top: 8px;
@@ -39,16 +153,16 @@ body {
 .ncbi-local-record pre {
   margin: 0;
   white-space: pre-wrap;
-  font-family: monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 12px;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .ref2-answer {
   white-space: pre-wrap;
 }
 
-/* Result page: contain the nine_col + three_col floats */
+/* ── Result page: nine_col + three_col layout container ── */
 .result-row {
   overflow: hidden;
   max-width: 1200px;
@@ -56,7 +170,7 @@ body {
   padding: 8px 10px;
 }
 
-/* Sidebar portlet styles for result page */
+/* Sidebar portlet colors */
 .supplemental .portlet_title h3 {
   color: #724128;
 }
