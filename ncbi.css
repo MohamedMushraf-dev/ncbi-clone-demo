@@ -11,49 +11,60 @@ body {
 }
 
 /* ── .header bar (gray search section on both pages) ── */
-.header {
-  background: #d5d5d5;
-  border-bottom: 1px solid #bbb;
-  padding: 0 20px;
-  position: relative;
-  display: flex;
-  align-items: stretch;
-  min-height: 52px;
-}
-
-/* res_logo: fixed-width left slot */
-.res_logo {
+div.header {
   display: flex !important;
-  align-items: center;
-  flex-shrink: 0;
-  width: 11.5em;
-  padding: 6px 0;
+  flex-direction: row !important;
+  align-items: center !important;
+  padding: 6px 20px !important;
+  background: #d5d5d5 !important;
+  border-bottom: 1px solid #bbb !important;
+  position: relative !important;
+  min-height: 46px !important;
 }
 
-/* Hide the tagline + img_logo text — the NIH logo in the blue header above is enough */
-.res_logo h2.res_tagline,
-.res_logo h1.img_logo {
+/* res_logo: fixed-width left slot, all NCBI overrides neutralised */
+div.header > div.res_logo {
+  position: static !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  width: 11.5em !important;
+  padding: 0 !important;
+  float: none !important;
+}
+
+/* Hide tagline + img_logo — NIH logo in blue header above is enough */
+div.header > div.res_logo h2.res_tagline,
+div.header > div.res_logo h1.img_logo {
   display: none !important;
 }
 
-/* Show res_name (e.g. "Nucleotide") on result/db pages */
-.res_logo h1.res_name {
+/* "Nucleotide" heading on result pages */
+div.header > div.res_logo h1.res_name {
+  position: static !important;
   display: block !important;
-  margin: 0;
-  font-weight: bold;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: bold !important;
+  font-size: 1em !important;
+  z-index: auto !important;
 }
-.res_logo .res_name a {
-  position: static !important;   /* NCBI CSS sets position:absolute — override it */
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
+div.header > div.res_logo h1.res_name a {
+  position: static !important;   /* NCBI page.css forces position:absolute — stop it */
+  display: inline !important;
+  font-size: 1.4em !important;
+  font-weight: bold !important;
+  color: #333 !important;
+  text-decoration: none !important;
 }
-.res_logo .res_name a:hover { text-decoration: underline; }
+div.header > div.res_logo h1.res_name a:hover { text-decoration: underline !important; }
 
-/* Also cancel the margin-left NCBI CSS puts on .search — we use flexbox instead */
-.header .search {
-  margin-left: 0 !important;
+/* search div takes all remaining width; cancel NCBI's margin-left:13.5em */
+div.header > div.search {
+  flex: 1 !important;
+  margin: 0 !important;
+  padding: 6px 0 !important;
+  float: none !important;
 }
 
 /* search div: takes remaining width */
