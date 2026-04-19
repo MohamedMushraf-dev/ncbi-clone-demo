@@ -34,6 +34,22 @@ with OpenAI integration. Total time: **~5 minutes**.
 
 ## Step 2 — Deploy to Vercel (choose one option)
 
+### 📌 Don't have a GitHub or Vercel account yet? — read this first
+
+You'll be asked to sign in to both. Both are **100% free**, no credit card,
+no plan choice. Total signup time: **~2 minutes**.
+
+1. **GitHub signup** → <https://github.com/signup>
+   - Enter email → password → username → solve a small puzzle → verify email
+   - Done. (You don't need to upload any code — Vercel handles that.)
+2. **Vercel signup** → happens automatically when you click the Deploy button
+   below. Just click **"Continue with GitHub"** on the Vercel sign-in screen
+   and use the GitHub account you just made.
+
+After this one-time setup, the Deploy button takes ~1 minute.
+
+---
+
 ### Option A — One-click Deploy (recommended, easiest)
 
 1. Click this button:
@@ -42,12 +58,18 @@ with OpenAI integration. Total time: **~5 minutes**.
 
    *(Or paste this URL in your browser: <https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FMohamedMushraf-dev%2Fncbi-clone-demo&env=OPENAI_API_KEY&envDescription=Your%20OpenAI%20API%20key&envLink=https%3A%2F%2Fplatform.openai.com%2Fapi-keys&project-name=ncbi-clone-demo&repository-name=ncbi-clone-demo>)*
 
-2. Sign in to Vercel with **GitHub**, **GitLab**, or **email**
-3. Vercel will create a **copy of the repo in your own GitHub account**
-4. When prompted for `OPENAI_API_KEY`, paste the key from Step 1
-5. Click **Deploy**
-6. Wait ~30 seconds → you'll get a live URL like
+2. On the Vercel screen → click **Continue with GitHub** (use the account you
+   just created above)
+3. GitHub asks: **"Authorize Vercel?"** → click **Authorize Vercel**
+4. Vercel automatically creates a **copy of the repo in your own GitHub
+   account** (you don't need to do anything for this — it just happens)
+5. When prompted for `OPENAI_API_KEY`, paste the key from Step 1
+6. Click **Deploy**
+7. Wait ~30 seconds → you'll get a live URL like
    `https://ncbi-clone-demo-xxx.vercel.app`
+8. Click **Visit** to open your live site
+
+🎉 **You're done.** Bookmark this URL — it's your site.
 
 ### Option B — Fork manually (if Option A button doesn't work)
 
